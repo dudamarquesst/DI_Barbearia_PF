@@ -1,0 +1,203 @@
+/* --- Variáveis Globais --- */
+:root {
+    --bg-body: #111111;
+    --bg-card: #1A1A1A;
+    --primary-red: #E31C25;
+    --text-white: #FFFFFF;
+    --text-gray: #A1A1A1;
+    --border-dark: #333333;
+}
+
+/* Reset e Base */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Utilitários de texto */
+.text-red { color: var(--primary-red) !important; }
+.text-gray { color: var(--text-gray) !important; }
+.bg-darker { background-color: var(--bg-card); }
+
+/* Navbar */
+.navbar {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-white) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-brand i {
+    color: var(--primary-red);
+}
+
+.nav-link {
+    color: var(--text-gray) !important;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-white) !important;
+}
+
+/* Botão "Início" ativo */
+.btn-nav-active {
+    background-color: var(--primary-red);
+    color: white !important;
+    border-radius: 6px;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Botões Personalizados */
+.btn-primary-red {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary-red:hover {
+    background-color: #c41820;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 1px solid var(--border-dark);
+    color: var(--text-white);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--border-dark);
+    color: white;
+    border-color: var(--border-dark);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 85vh;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cards de Serviços */
+.section-title {
+    color: var(--primary-red);
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.custom-card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+}
+
+.icon-box {
+    font-size: 2rem;
+    color: var(--primary-red);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.time {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* Feature Cards (Por que escolher) */
+.feature-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid #222;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para o Modal de Agendamento */
+.modal-custom {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-dark);
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+
+.form-control-custom {
+    background-color: var(--bg-body) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-white) !important;
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+}
+
+.form-control-custom:focus {
+    box-shadow: 0 0 0 0.25rem rgba(227, 28, 37, 0.25) !important;
+    border-color: var(--primary-red) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .display-3 { font-size: 2.5rem; }
+    .hero-section { min-height: auto; padding: 6rem 0; }
+    .navbar-collapse {
+        background-color: var(--bg-card);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}

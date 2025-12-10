@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devs Barber - Agendamento Online</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-scissors"></i> Devs Barber
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav-active" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#agendamentoModal"><i class="far fa-calendar-alt me-1"></i> Agendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="far fa-user me-1"></i> Meus Agendamentos</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-outline-custom py-2 px-4" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-sign-in-alt me-2"></i>Entrar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3 text-white">
+                <span class="text-red">Agende seu horário</span><br>
+                com poucos cliques
+            </h1>
+            <p class="text-gray mx-auto mb-5" style="max-width: 600px; font-size: 1.1rem;">
+                Sistema profissional de agendamento para barbearias. Sem confusão, sem faltas, 100% organizado.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#" class="btn btn-primary-red" data-bs-toggle="modal" data-bs-target="#agendamentoModal">Agendar Agora</a>
+                <a href="#" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#barbeiroModal">Sou Barbeiro</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Nossos Serviços</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <div class="icon-box">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h4 class="text-white">Corte Tradicional</h4>
+                        <p class="text-gray small flex-grow-1">Corte clássico com acabamento profissional e toalha quente.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="price">R$ 35,00</span>
+                            <span class="time"><i class="far fa-clock me-1"></i> 30 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <div class="icon-box">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="text-white">Barba</h4>
+                        <p class="text-gray small flex-grow-1">Aparar e modelar a barba com navalha e produtos especiais.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="price">R$ 25,00</span>
+                            <span class="time"><i class="far fa-clock me-1"></i> 20 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="custom-card">
+                        <div class="icon-box">
+                            <i class="fas fa-wine-bottle"></i> 
+                        </div>
+                        <h4 class="text-white">Combo Completo</h4>
+                        <p class="text-gray small flex-grow-1">Experiência completa: Corte + Barba + Acabamento + Bebida.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <span class="price">R$ 50,00</span>
+                            <span class="time"><i class="far fa-clock me-1"></i> 50 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-white fw-bold display-6">Por que escolher o <span class="text-red">Devs Barber?</span></h2>
+                <p class="text-gray mt-2">Tecnologia que facilita sua vida e profissionaliza seu negócio</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="far fa-clock feature-icon"></i>
+                        <h5 class="text-white mt-3">Rápido</h5>
+                        <p class="text-gray small text-center mb-0">Agende em segundos</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="far fa-credit-card feature-icon"></i>
+                        <h5 class="text-white mt-3">Pagamento</h5>
+                        <p class="text-gray small text-center mb-0">Pix ou Cartão</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="far fa-bell feature-icon"></i>
+                        <h5 class="text-white mt-3">Lembretes</h5>
+                        <p class="text-gray small text-center mb-0">Via WhatsApp</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line feature-icon"></i>
+                        <h5 class="text-white mt-3">Gestão</h5>
+                        <p class="text-gray small text-center mb-0">Painel completo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 my-5 bg-darker text-center">
+        <div class="container">
+            <div class="mb-4 text-red display-4">
+                <i class="far fa-star"></i>
+            </div>
+            <h2 class="text-white fw-bold display-5 mb-3">Pronto para começar?</h2>
+            <p class="text-gray mb-5">Junte-se aos barbeiros que já transformaram seu negócio.</p>
+            <a href="#" class="btn btn-primary-red btn-lg px-5" data-bs-toggle="modal" data-bs-target="#agendamentoModal">Fazer Meu Primeiro Agendamento</a>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary border-opacity-25" style="background-color: #0a0a0a;">
+        <small class="text-gray">© 2025 Devs Barber. Todos os direitos reservados.</small>
+    </footer>
+
+    <div class="modal fade" id="agendamentoModal" tabindex="-1" aria-labelledby="agendamentoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title text-red" id="agendamentoModalLabel">Agendar Horário</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p class="text-gray small">Escolha o serviço e o melhor horário para você.</p>
+                    <form id="formAgendamento" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="servicoSelect" class="form-label text-white">Serviço</label>
+                            <select class="form-select form-control-custom" id="servicoSelect" required>
+                                <option selected disabled value="">Selecione um Serviço...</option>
+                                <option value="corte">Corte Tradicional (R$ 35,00)</option>
+                                <option value="barba">Barba (R$ 25,00)</option>
+                                <option value="combo">Combo Completo (R$ 50,00)</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, selecione um serviço.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="dataInput" class="form-label text-white">Data</label>
+                            <input type="date" class="form-control form-control-custom" id="dataInput" required>
+                            <div class="invalid-feedback">
+                                Por favor, escolha uma data.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="horaSelect" class="form-label text-white">Horário</label>
+                            <select class="form-select form-control-custom" id="horaSelect" required>
+                                <option selected disabled value="">Selecione um Horário...</option>
+                                <option value="0900">09:00</option>
+                                <option value="0930">09:30</option>
+                                <option value="1000">10:00</option>
+                                <option value="1030">10:30</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, escolha um horário.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-red w-100 mt-3">Confirmar Agendamento</button>
+                    </form>
+                    <div id="agendamento-status" class="mt-3 text-center d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title text-red" id="loginModalLabel">Acesso ao Cliente</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p class="text-gray small">Faça login para ver seus agendamentos e histórico.</p>
+                    <form id="formLogin" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label text-white">E-mail</label>
+                            <input type="email" class="form-control form-control-custom" id="emailInput" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um e-mail válido.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="senhaInput" class="form-label text-white">Senha</label>
+                            <input type="password" class="form-control form-control-custom" id="senhaInput" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira sua senha.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-red w-100 mt-3">Entrar</button>
+                        <p class="text-center text-gray small mt-3">
+                            Não tem conta? <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#cadastroModal" data-bs-dismiss="modal">Cadastre-se</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title text-red" id="cadastroModalLabel">Criar Nova Conta</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <p class="text-gray small">É rápido e fácil. Preencha seus dados abaixo.</p>
+                    <form id="formCadastro" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="nomeCadastroInput" class="form-label text-white">Nome Completo</label>
+                            <input type="text" class="form-control form-control-custom" id="nomeCadastroInput" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira seu nome.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailCadastroInput" class="form-label text-white">E-mail</label>
+                            <input type="email" class="form-control form-control-custom" id="emailCadastroInput" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um e-mail válido.
+                            </div>
+                        </div>
+                         <div class="mb-3">
+                            <label for="senhaCadastroInput" class="form-label text-white">Criar Senha</label>
+                            <input type="password" class="form-control form-control-custom" id="senhaCadastroInput" required minlength="6">
+                            <div class="invalid-feedback">
+                                A senha deve ter no mínimo 6 caracteres.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-red w-100 mt-3">Cadastrar</button>
+                        <p class="text-center text-gray small mt-3">
+                            Já tem conta? <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Fazer Login</a>
+                        </p>
+                    </form>
+                    <div id="cadastro-status" class="mt-3 text-center d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="barbeiroModal" tabindex="-1" aria-labelledby="barbeiroModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom text-center">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title w-100 text-red" id="barbeiroModalLabel"><i class="fas fa-chart-line me-2"></i> Área do Barbeiro</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <p class="text-gray">
+                        Gerencie seus horários, clientes e relatórios através do nosso painel profissional.
+                    </p>
+                    <form>
+                        <button type="button" class="btn btn-primary-red w-100 mb-2">Acessar Painel</button>
+                        <button type="button" class="btn btn-outline-custom w-100 mt-2" data-bs-dismiss="modal">Saber Mais</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
